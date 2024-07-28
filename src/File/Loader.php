@@ -229,6 +229,8 @@ class Loader implements LoaderInterface
         }
         $this->setCurlOptions($curl);
 
+        curl_setopt($curl, CURLOPT_USERAGENT, 'PHP'); // Set User-Agent to mimic a browser
+
         $response = @curl_exec($curl);
         if ($response === false) {
             $errorMessage = curl_error($curl);
