@@ -24,6 +24,7 @@ without the PHP ``exif`` extension, but then it can't read and act on image orie
 
 ### Installation using composer
 `php composer.phar require benf45/imagine`
+
 ORIGINAL
 `php composer.phar require imagine/imagine`
 
