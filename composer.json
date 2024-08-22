@@ -1,6 +1,7 @@
 {
-    "name": "imagine/imagine",
-    "description": "Image processing for PHP 5.3",
+    "name": "benf45/imagine",
+    "version": "1.0.0",
+    "description": "Image processing for PHP 5.3 - A fork of the original package with additional features.",
     "keywords": [
         "image manipulation",
         "image processing",
@@ -55,6 +56,12 @@
             "composer.phar"
         ]
     },
+    "repository": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/benf45/Imagine"
+            }
+        ],
     "scripts": {
         "test": "phpunit --verbose"
     }
