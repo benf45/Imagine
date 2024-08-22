@@ -56,12 +56,8 @@
             "composer.phar"
         ]
     },
-    "repository": [
-            {
-                "type": "vcs",
-                "url": "https://github.com/benf45/Imagine"
-            }
-        ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "test": "phpunit --verbose"
     }
