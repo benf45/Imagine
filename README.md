@@ -23,6 +23,8 @@ To read EXIF metadata (e.g. for autorotation), activate the PHP ``exif`` extensi
 without the PHP ``exif`` extension, but then it can't read and act on image orientation or other EXIF metadata.
 
 ### Installation using composer
+`php composer.phar require benf45/imagine`
+ORIGINAL
 `php composer.phar require imagine/imagine`
 
 ## Basic Principles
