@@ -227,9 +227,13 @@ class Loader implements LoaderInterface
         if (!@curl_setopt($curl, CURLOPT_RETURNTRANSFER, true)) {
             throw new RuntimeException('curl_setopt(CURLOPT_RETURNTRANSFER) failed.');
         }
-        $this->setCurlOptions($curl);
 
-        curl_setopt($curl, CURLOPT_USERAGENT, 'PHP'); // Set User-Agent to mimic a browser
+        $this->setCurlOptions($curl);
+        @curl_setopt($curl, CURLOPT_URL, $this->path);
+        @curl_setopt($curl, CURLOPT_USERAGENT, 'PHP, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'); // Set User-Agent to mimic a browser
+        @curl_setopt($curl, CURLOPT_HTTPHEADER, [
+                                                'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+                                               ]);
 
         $response = @curl_exec($curl);
         if ($response === false) {
